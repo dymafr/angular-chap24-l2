@@ -2,9 +2,9 @@
 	<mat-tab label="Onglet 1">
 		<div class="container">
 			<mat-chip-list>
-				<mat-chip [removable]="true" *ngFor="let chip of chips">
+				<mat-chip (removed)="removeChip($event, chip)" [removable]="true" *ngFor="let chip of chips">
 					{{chip}}
-					<mat-icon (removed)="removeChip($event, chip)" matChipRemove>cancel</mat-icon>
+					<mat-icon matChipRemove>cancel</mat-icon>
 				</mat-chip>
 			</mat-chip-list>
 			<br>
