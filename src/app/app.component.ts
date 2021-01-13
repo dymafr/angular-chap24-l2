@@ -6,5 +6,9 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent implements OnInit {
+  toggle(event) {
+    console.log(event);
+  }
+
   ngOnInit() {}
 }
