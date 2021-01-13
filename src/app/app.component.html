@@ -1,6 +1,15 @@
 <mat-tab-group>
 	<mat-tab label="Onglet 1">
 		<div class="container">
+			<mat-chip-list>
+				<mat-chip [removable]="true" *ngFor="let chip of chips">
+					{{chip}}
+					<mat-icon (removed)="removeChip($event, chip)" matChipRemove>cancel</mat-icon>
+				</mat-chip>
+			</mat-chip-list>
+			<br>
+			<br>
+
 			<mat-button-toggle-group (change)="toggle($event)">
 				<mat-button-toggle value="1">Mon bouton 1</mat-button-toggle>
 				<mat-button-toggle value="2">Mon bouton 2</mat-button-toggle>
@@ -9,6 +18,7 @@
 
 			<br>
 			<br>
+
 			<mat-accordion>
 				<mat-expansion-panel>
 					<mat-expansion-panel-header>
