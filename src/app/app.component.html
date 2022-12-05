@@ -1,16 +1,16 @@
 <mat-tab-group>
   <mat-tab label="Onglet 1">
     <div class="container">
-      <mat-chip-listbox>
-        <mat-chip-row
+      <mat-chip-set>
+        <mat-chip
           (removed)="removeChip(chip)"
           [removable]="true"
           *ngFor="let chip of chips"
         >
           {{ chip }}
           <mat-icon matChipRemove>cancel</mat-icon>
-        </mat-chip-row>
-      </mat-chip-listbox>
+        </mat-chip>
+      </mat-chip-set>
       <br />
       <br />
 
