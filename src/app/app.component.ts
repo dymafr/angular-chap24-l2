@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatButtonToggleChange } from '@angular/material/button-toggle';
 
 @Component({
   selector: 'my-app',
@@ -8,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   public chips: string[] = ['chip 1', 'chip 2', 'chip 3'];
 
-  toggle(event: any) {
-    console.log(event);
+  toggle(event: MatButtonToggleChange) {
+    console.log(event.value);
   }
 
   removeChip(chip: string) {
