@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
     console.log(event);
   }
 
-  removeChip(event, chip: string) {
+  removeChip(chip: string) {
     this.chips = this.chips.filter((el) => el !== chip);
   }
 

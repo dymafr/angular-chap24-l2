@@ -3,7 +3,7 @@
     <div class="container">
       <mat-chip-grid>
         <mat-chip-row
-          (removed)="removeChip($event, chip)"
+          (removed)="removeChip(chip)"
           [removable]="true"
           *ngFor="let chip of chips"
         >
