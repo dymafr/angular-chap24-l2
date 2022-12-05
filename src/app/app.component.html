@@ -1,7 +1,7 @@
 <mat-tab-group>
   <mat-tab label="Onglet 1">
     <div class="container">
-      <mat-chip-grid>
+      <mat-chip-listbox>
         <mat-chip-row
           (removed)="removeChip(chip)"
           [removable]="true"
@@ -10,7 +10,7 @@
           {{ chip }}
           <mat-icon matChipRemove>cancel</mat-icon>
         </mat-chip-row>
-      </mat-chip-grid>
+      </mat-chip-listbox>
       <br />
       <br />
 
